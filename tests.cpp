@@ -13,14 +13,14 @@ TEST_CASE("Ex1 ", "[example]")
 	printStudent(head);
 
 	tmp = head;
-	REQUIRE(head->id == 10001);
-	REQUIRE(head->name == "John");
-	REQUIRE(head->major == "Math");
+	REQUIRE(tmp->id == 10001);
+	REQUIRE(strcmp(tmp->name, "John") == 0);
+	REQUIRE(strcmp(tmp->major, "Math") == 0);
 
 	tmp = tmp->next;
 	REQUIRE(tmp->id == 10002);
-	REQUIRE(tmp->name == "James");
-	REQUIRE(tmp->major == "Physics");
+	REQUIRE(strcmp(tmp->name, "James") == 0);
+	REQUIRE(strcmp(tmp->major, "Physics") == 0);
 
 	tmp = tmp->next;
 	REQUIRE(tmp->id == 10003);
